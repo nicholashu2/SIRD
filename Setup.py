@@ -27,7 +27,7 @@ beta = 0.10      #infectivity rate
 gamma = 1/21    #recovery rate
 delta = .0049   #mortality rate
 ## End of Initial Setup
-def equations(y, t, N, beta, gamma, delta):
+def equations(y, N, beta, gamma, delta):
     S, I, R, D = y 
     dSdt = -beta * S * I / N 
     dIdt = beta * S * I / N - gamma * I - delta * I 
